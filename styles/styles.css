@@ -24,17 +24,38 @@ html {
 header {
     width: 100%;
     height: 70px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-flow: row;
-    background-color: var(--fourth-color);
-}
-.header-logo-container {
-    width: 100%;
     padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--fourth-color);
 }
 .header-logo-container img {
     height: 60px;
     object-fit: contain;
-    justify-self: flex-start;
+}
+.nav-list-items {
+    width: 400px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    list-style: none;
+}
+.nav-list-items .nav-item {
+    width: 100%;
+    height: 100%;
+}
+.nav-list-items .nav-item a {
+    height: 100%;
+    width: 100%;
+    padding: calc((70px - 2rem)/2) 0;
+    display: inline-block;
+    color: black;
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-align: center;
+}
+.nav-list-items .nav-item a:hover {
+    color: var(--second-color);
+    background-color: var(--third-color);
 }
