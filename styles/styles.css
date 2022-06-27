@@ -7,6 +7,8 @@
     --header-height: 70px;
     --footer-height: 30px;
     --main-height: calc(100vh - ((var(--header-height) + var(--footer-height))));
+
+    /* Actual colors */
 }
 
 /* Globales */
@@ -19,8 +21,14 @@ html {
     font-size: 62.5%;
 }
 .container {
+    max-width: 1120px;
     display: grid;
-    place-items: center;
+    place-content: center;
+}
+.grid-container {
+    max-width: 1120px;
+    display: grid;
+    place-content: center;
 }
 
 /* Header */
