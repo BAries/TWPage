@@ -1,6 +1,11 @@
+/* Scrool más discreto */
+::-webkit-scrollbar{
+    display: none;
+}
+
 /* Variables */
 :root {
-    --first-color: #f7f7f7;
+    --first-color: #F5F5F5;
     --second-color: #eeeeee;
     --third-color: #393e46;
     --fourth-color: #929aab;
@@ -26,8 +31,8 @@ html {
 }
 body {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    justify-items: center;
 }
 .grid-container {
     max-width: 1120px;
@@ -102,4 +107,11 @@ header {
     margin-left: 7px;
     height: 24px;
     border-radius: 10px;
+}
+
+/* Main */
+main {
+    width: 100%;
+    min-height: 500px;
+    background-color: var(--first-color);
 }
