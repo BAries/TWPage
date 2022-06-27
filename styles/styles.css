@@ -1,0 +1,40 @@
+/* Variables */
+:root {
+    --first-color: #f7f7f7;
+    --second-color: #eeeeee;
+    --third-color: #393e46;
+    --fourth-color: #929aab;
+}
+
+/* Globales */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+.container {
+    display: grid;
+    place-items: center;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    background-color: var(--fourth-color);
+}
+.header-logo-container {
+    width: 100%;
+    padding: 0 30px;
+}
+.header-logo-container img {
+    height: 60px;
+    object-fit: contain;
+    justify-self: flex-start;
+}
