@@ -1,0 +1,117 @@
+/* Scrool más discreto */
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Variables */
+:root {
+    --first-color: #F5F5F5;
+    --second-color: #eeeeee;
+    --third-color: #393e46;
+    --fourth-color: #929aab;
+    --header-height: 120px;
+    --footer-height: 30px;
+    --main-height: calc(100vh - ((var(--header-height) + var(--footer-height))));
+
+    /* Actual colors */
+    --pink-color: #FF69B4;
+    --blue-color: #4169E1;
+    --white-color: white;
+    --black-color: black;
+}
+
+/* Globales */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+.grid-container {
+    max-width: 1120px;
+    display: grid;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--black-color);
+}
+.header-banner {
+    width: 100%;
+    height: 80px;
+    place-items: center;
+    background-image: url("../assets/imgs/header-flag.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-banner img {
+    height: 60px;
+}
+.header-nav {
+    width: 100%;
+    height: calc(var(--header-height) - 80px);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+}
+.header-nav nav {
+    width: 40%;
+    height: 100%;
+}
+.header-nav nav ul {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+}
+.header-nav .nav-item {
+    width: 100%;
+    height: 100%;
+}
+.header-nav .nav-item a {
+    width: 100%;
+    height: 100%;
+    padding: calc(((var(--header-height) - 80px) - 2.3rem) / 2);
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+}
+.header-nav .nav-item a:hover {
+    background-color: var(--pink-color);
+}
+.header-nav .nav-finder {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header-nav .nav-finder input {
+    width: 100%;
+    padding: 0 10px;
+    margin-left: 7px;
+    height: 24px;
+    border-radius: 10px;
+}
+
+/* Main */
+main {
+    width: 100%;
+    min-height: 500px;
+    background-color: var(--first-color);
+}
